@@ -10,15 +10,15 @@ interface Props {
 const AuthenticationButton = ({ authenticated, signIn, signOut }: Props) => {
   if (authenticated) {
     return (
-      <Button variant="contained" color="primary" onClick={signIn}>
-        Sign in
+      <Button variant="outlined" color="secondary" onClick={signOut}>
+        Sign out
       </Button>
     );
   }
 
   return (
-    <Button variant="outlined" color="secondary" onClick={signOut}>
-      Sign out
+    <Button variant="contained" color="primary" onClick={signIn}>
+      Sign in
     </Button>
   );
 };

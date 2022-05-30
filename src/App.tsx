@@ -38,7 +38,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AuthenticationButton
-        authenticated={user !== undefined}
+        authenticated={user?.uid !== undefined}
         signIn={logInWithGoogle}
         signOut={logout}
       />
